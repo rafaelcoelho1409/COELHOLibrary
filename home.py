@@ -41,13 +41,7 @@ def run_dash():
     #    text = True)
     #print(result)
     #subprocess.run(["python3", "dash_app.py"])
-    result = subprocess.run(
-        """ls""",
-        shell = True,
-        capture_output = True,
-        text = True
-    )
-    st.text(result)
+    subprocess.run(["ls"])
 
 dash_thread = threading.Thread(target = run_dash)
 dash_thread.start()
