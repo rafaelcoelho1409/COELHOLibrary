@@ -28,7 +28,7 @@ navbar = dbc.Navbar(
                         dbc.NavbarBrand(
                             ["COELHO Library"],
                             style = {
-                                'font-size': '300%',
+                                'font-size': '250%',
                                 'font-weight': 'bold',
                                 'font-family': 'Times New Roman'
                             })
