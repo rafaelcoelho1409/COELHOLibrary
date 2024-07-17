@@ -398,4 +398,4 @@ for x in catalog['filename']:
 
 
 if __name__ == '__main__':
-    app.run(debug = True, dev_tools_ui = False)
+    app.run(debug = True, port = 8051, dev_tools_ui = False)
