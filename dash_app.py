@@ -8,7 +8,10 @@ catalog = pd.read_csv("catalog.csv")
 catalog = catalog[catalog['sold_out'] == 'No']
 
 app = dash.Dash(
-    external_stylesheets = [dbc.themes.BOOTSTRAP]
+    external_stylesheets = [dbc.themes.BOOTSTRAP],
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"}
+        ]
     )
 
 server = app.server
