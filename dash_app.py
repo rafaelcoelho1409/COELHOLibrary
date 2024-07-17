@@ -145,10 +145,9 @@ internacional nos próximos anos.""",
                                     controls = True,
                                     indicators = True,
                                     interval = 3000,
-                                    style = {'width': '25%', 'text-align': 'center'},
+                                    style = {'width': '50%', 'text-align': 'center'},
                                     variant = 'dark'         
                                 ),
-                                width={"size": 12, "offset": 5},  # Center the column
                                 )], 
                                 style = {'text-align': 'center', 'padding': '0'})
                     ], 
