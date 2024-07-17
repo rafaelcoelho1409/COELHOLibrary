@@ -1,4 +1,5 @@
 import streamlit as st
+import sys
 import threading
 import subprocess
 
@@ -40,8 +41,8 @@ def run_dash():
     #    capture_output = True, 
     #    text = True)
     #print(result)
-    #subprocess.run(["python3", "dash_app.py"])
-    subprocess.run(["pip", "list"])
+    subprocess.run([sys.executable, "dash_app.py"])
+    #subprocess.run(["pip", "list"])
 
 dash_thread = threading.Thread(target = run_dash)
 dash_thread.start()
