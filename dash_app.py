@@ -1,7 +1,7 @@
 import dash
 import re
 import pandas as pd
-from dash import html, dcc, Input, Output
+from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 
 catalog = pd.read_csv("catalog.csv")
@@ -24,7 +24,7 @@ navbar = dbc.Navbar(
                             [html.Br(), "COELHO Library"],
                             style = {
                                 'text-align': 'center',
-                                'font-size': '250%',
+                                'font-size': '300%',
                                 'font-weight': 'bold',
                                 'font-family': 'Times New Roman'
                             })
@@ -218,7 +218,6 @@ app.layout = html.Div(
 #---------------------
 #>>>---CALLBACKS---<<<
 #---------------------
-
 @app.callback(
     Output("books_id", "children"),
     Input("filter_search", "value"),
@@ -249,104 +248,153 @@ def filter_data(
     catalog = catalog[catalog['genre'].isin(genre)]
     catalog = catalog[catalog['price_discount'] >= min_price]
     catalog = catalog[catalog['price_discount'] <= max_price]
-    books = dbc.Container([
-    dbc.CardGroup([
-        dbc.Card([
-            dbc.Row([
-                dbc.Col([
-                    dbc.CardBody([
-                        dbc.Carousel(
-                            items = [
-                                {
-                                    'key': '1', 
-                                    'src': f'assets/{x}1.png',
-                                    },
-                                {
-                                    'key': '2', 
-                                    'src': f'assets/{x}2.png',
-                                    },
-                            ],
-                            controls = True,
-                            indicators = True,
-                            interval = 3000,
-                            style = {'width': '100%'},
-                            variant = 'dark'
-                        )])]),
-                dbc.Col([
-                    html.P(
-                        catalog[catalog['filename'] == x]['name'],
-                        style = {
-                            'font-weight': 'bold',
-                            'font-size': '125%'
-                        }
-                    ),
-                    html.I(
-                        catalog[catalog['filename'] == x]['author'],
-                        style = {
-                            'font-size': '100%'
-                        }
-                    ),
-                    html.P(
-                        catalog[catalog['filename'] == x]['genre'],
-                        style = {
-                            'font-size': '100%'
-                        }
-                    ),
-                    html.Hr(),
-                    html.P(
-                        catalog[catalog['filename'] == x]['price_description'],
-                        style = {
-                            'font-weight': 'bold',
-                            'font-size': '100%',
-                        }
-                    ),
-                    html.P(
-                        f'R${catalog[catalog["filename"] == x]["price_discount"].iloc[0]:.2f}',
-                        style = {
-                            'font-weight': 'bold',
-                            'font-size': '200%',
-                            'color': 'green'
-                        }
-                    ),
-                    html.Hr(),
-                    html.P(
-                        'Preço original - ' + catalog[catalog['filename'] == x]['seller'],
-                        style = {
-                            'font-weight': 'bold',
-                            'font-size': '100%',
-                        }
-                    ),
-                    html.P(
-                        f'R${catalog[catalog["filename"] == x]["price"].iloc[0]:.2f}',
-                        style = {
-                            'font-weight': 'bold',
-                            'font-size': '200%',
-                            'color': 'red'
-                        }
-                    ),
-                    html.Div(
-                        dbc.Row([
-                            dbc.Col(
-                                dbc.Button(
-                                    "Detalhes",
-                                    id = f"details_{x}",
-                                    color = "success",
-                                    style = {
-                                        'margin': '10px',
-                                        'width': '90%'},
-                                    href = f"assets/{x}.pdf",
-                                    external_link = True
+    modals = []
+    books = []
+    for y in list(range(len(catalog)))[::2]:
+        row = []
+        for x in catalog['filename'][y:y + 2]:
+            book_info = catalog[catalog['filename'] == x].iloc[0]
+            # Create a Modal for each book
+            modals.append(
+                dbc.Modal(
+                    [
+                        dbc.ModalHeader(
+                            dbc.ModalTitle(
+                                f'{book_info["name"]} - {book_info["author"]}')),
+                        dbc.ModalBody(
+                            dbc.Row([
+                                dbc.Col(
+                                    dbc.CardImg(
+                                        src = f'assets/{x}1.png',
+                                        #style = {"max-height": "100vh", "object-fit": "contain"}
+                                    )
                                 ),
+                                dbc.Col(
+                                    dbc.CardImg(
+                                        src = f'assets/{x}2.png',
+                                        #style = {"max-height": "100vh", "object-fit": "contain"}
+                                    )
+                                )
+                            ])
+                        ),
+                        dbc.ModalFooter(
+                            dbc.Button(
+                                "Close", 
+                                id = f"close_{x}", 
+                                className = "ms-auto", 
+                                n_clicks = 0,
+                                style = {'display': 'none'})
+                        ),
+                    ],
+                    id = f"modal_{x}",
+                    is_open = False,
+                    size="xl",
+                    style={"max-width": "100%", "width": "100%", "height": "100vh"}
+                )
+            )
+            row.append(
+                dbc.Card([
+                    dbc.Row([
+                        dbc.Col([
+                            dbc.CardBody([
+                                dbc.Carousel(
+                                    items = [
+                                        {'key': '1', 'src': f'assets/{x}1.png'},
+                                        {'key': '2', 'src': f'assets/{x}2.png'},
+                                    ],
+                                    controls = True,
+                                    indicators = True,
+                                    interval = 3000,
+                                    style = {'width': '100%'},
+                                    variant = 'dark'
+                                )
+                            ])
+                        ]),
+                        dbc.Col([
+                            html.P(
+                                book_info['name'],
+                                style = {
+                                    'font-weight': 'bold',
+                                    'font-size': '125%'
+                                }
+                            ),
+                            html.I(
+                                book_info['author'],
+                                style = {
+                                    'font-size': '100%'
+                                }
+                            ),
+                            html.P(
+                                book_info['genre'],
+                                style = {
+                                    'font-size': '100%'
+                                }
+                            ),
+                            html.Hr(),
+                            html.P(
+                                book_info['price_description'],
+                                style = {
+                                    'font-weight': 'bold',
+                                    'font-size': '100%',
+                                }
+                            ),
+                            html.P(
+                                f'R${book_info["price_discount"]:.2f}',
+                                style = {
+                                    'font-weight': 'bold',
+                                    'font-size': '200%',
+                                    'color': 'green'
+                                }
+                            ),
+                            html.Hr(),
+                            html.P(
+                                'Preço original - ' + book_info['seller'],
+                                style = {
+                                    'font-weight': 'bold',
+                                    'font-size': '100%',
+                                }
+                            ),
+                            html.P(
+                                f'R${book_info["price"]:.2f}',
+                                style = {
+                                    'font-weight': 'bold',
+                                    'font-size': '200%',
+                                    'color': 'red'
+                                }
+                            ),
+                            html.Div(
+                                dbc.Row([
+                                    dbc.Col(
+                                        dbc.Button(
+                                            "Detalhes",
+                                            id = f"details_{x}",
+                                            color = "success",
+                                            style = {
+                                                'margin': '10px',
+                                                'width': '90%'}
+                                        ),
+                                    )
+                                ])
                             )
-                        ]))])
-                        
-                ])
-            ],
-            style = {'margin': '5px'},
-            outline = True) for x in catalog['filename'][y:y + 2]
-        ]) for y in list(range(len(catalog)))[::2]
-    ])
-    return books
+                        ])
+                    ]),
+                ], style = {'margin': '5px'}, outline = True)
+            )
+        books.append(dbc.CardGroup(row, style = {'margin': '5px'}))
+    return dbc.Container(books + modals)
+
+# Callbacks for opening and closing modals
+for x in catalog['filename']:
+    @app.callback(
+        Output(f"modal_{x}", "is_open"),
+        [Input(f"details_{x}", "n_clicks"), Input(f"close_{x}", "n_clicks")],
+        [State(f"modal_{x}", "is_open")]
+    )
+    def toggle_modal(n1, n2, is_open, x = x):
+        if n1 or n2:
+            return not is_open
+        return is_open
+
 
 
 if __name__ == '__main__':
