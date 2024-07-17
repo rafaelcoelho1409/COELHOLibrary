@@ -28,12 +28,11 @@ navbar = dbc.Navbar(
                         dbc.NavbarBrand(
                             ["COELHO Library"],
                             style = {
-                                'text-align': 'center',
                                 'font-size': '300%',
                                 'font-weight': 'bold',
                                 'font-family': 'Times New Roman'
                             })
-                    )
+                    ),
                 ]
             )
         ]
@@ -44,24 +43,24 @@ introduction = html.Div(
     dbc.Container(
         dbc.Card(
             dbc.Row([
-                dbc.Col(
-                    dbc.CardBody(
-                        dbc.Carousel(
-                            items = [
-                                {
-                                    'key': x, 
-                                    'src': f'assets/my_photos/rafael00{x}.jpeg',
-                                    } for x in range(1,5)
-                            ],
-                            controls = True,
-                            indicators = True,
-                            interval = 3000,
-                            style = {'width': '100%', 'text-align': 'center'},
-                            variant = 'dark'         
-                        )
-                    ), 
-                    className = "col-md-4"
-                ),
+                #dbc.Col(
+                #    dbc.CardBody(
+                #        dbc.Carousel(
+                #            items = [
+                #                {
+                #                    'key': x, 
+                #                    'src': f'assets/my_photos/rafael00{x}.jpeg',
+                #                    } for x in range(1,5)
+                #            ],
+                #            controls = True,
+                #            indicators = True,
+                #            interval = 3000,
+                #            style = {'width': '100%', 'text-align': 'center'},
+                #            variant = 'dark'         
+                #        )
+                #    ), 
+                #    className = "col-md-4"
+                #),
                 dbc.Col(
                     dbc.CardBody([
                         html.P("""
@@ -133,81 +132,81 @@ internacional nos próximos anos.""",
                         ])
                     ], 
                     ),
-                    className="col-md-8"
+                    className="col-md-8",
+                    style={'height': '100%', 'width': '100%'}
                 )
             ])
-        )
+        ),
     )
 )
 
 filters = html.Div(dbc.Container([
-    html.Hr(),
+    html.Br(),
     dbc.Alert(
-        "LIVROS", 
-        color = "primary",
-        style = {
-            'text-align': 'center',
-            'font-size': '150%',
-            'font-weight': 'bold',
-            'font-family': 'Times New Roman'
-        }),
-    dbc.Row([
-        dbc.Col("Buscar"),
-        dbc.Col("Seller"),
-        dbc.Col("Categoria"),
-        dbc.Col("Preço Mínimo (R$)"),
-        dbc.Col("Preço Máximo (R$)")
-    ],
+    "FILTROS", 
+    color = "secondary",
+    style = {
+        'text-align': 'center',
+        'font-size': '150%',
+        'font-weight': 'bold',
+        'font-family': 'Times New Roman'
+    }),
+    dbc.Card([
+    html.P("Buscar"),
+    dcc.Input(
+        value = "",
+        type = "text",
+        id = "filter_search",
+        style = {'width': '100%'}),
+    html.P("Seller"),
+    dcc.Dropdown(
+        catalog["seller"].unique().tolist(),
+        catalog["seller"].unique().tolist(),
+        multi = True,
+        id = "filter_seller"
+    ),
+    html.P("Categoria"),
+    dcc.Dropdown(
+        catalog["genre"].unique().tolist(),
+        catalog["genre"].unique().tolist(),
+        multi = True,
+        id = "filter_genre"
+    ),
+    html.P("Preço Mínimo (R$)"),
+    dcc.Input(
+        min = catalog['price_discount'].min(),
+        max = catalog['price_discount'].max(),
+        step = 0.01,
+        value = catalog['price_discount'].min(),
+        type = "number",
+        id = "filter_min_price",
+        style = {'width': '100%'}
+    ),
+    html.P("Preço Máximo (R$)"),
+    dcc.Input(
+        min = catalog['price_discount'].min(),
+        max = catalog['price_discount'].max(),
+        step = 0.01,
+        value = catalog['price_discount'].max(),
+        type = "number",
+        id = "filter_max_price",
+        style = {'width': '100%'}
+    )],
     style = {
         'font-weight': 'bold',
+        'text-align': 'center',
+        'margin': '10px'
     }),
-    dbc.Row([
-        dbc.Col(
-            dcc.Input(
-                value = "",
-                type = "text",
-                id = "filter_search",
-                style = {'width': '100%'}
-            )),
-        dbc.Col(
-            dcc.Dropdown(
-                catalog["seller"].unique().tolist(),
-                catalog["seller"].unique().tolist(),
-                multi = True,
-                id = "filter_seller"
-            )),
-        dbc.Col(
-            dcc.Dropdown(
-                catalog["genre"].unique().tolist(),
-                catalog["genre"].unique().tolist(),
-                multi = True,
-                id = "filter_genre"
-            )),
-        dbc.Col(
-            dcc.Input(
-                min = catalog['price_discount'].min(),
-                max = catalog['price_discount'].max(),
-                step = 0.01,
-                value = catalog['price_discount'].min(),
-                type = "number",
-                id = "filter_min_price",
-                style = {'width': '100%'}
-            )),
-        dbc.Col(
-            dcc.Input(
-                min = catalog['price_discount'].min(),
-                max = catalog['price_discount'].max(),
-                step = 0.01,
-                value = catalog['price_discount'].max(),
-                type = "number",
-                id = "filter_max_price",
-                style = {'width': '100%'}
-            ))
-    ]),
-    html.Hr()
-], 
-    #style = {'margin': '10px'},
-    id = "filters_id"))
+    dbc.Alert(
+    "LIVROS", 
+    color = "primary",
+    style = {
+        'text-align': 'center',
+        'font-size': '150%',
+        'font-weight': 'bold',
+        'font-family': 'Times New Roman'
+    }),]))
+
 
 books = html.Div(id = "books_id")
 
