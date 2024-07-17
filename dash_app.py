@@ -267,20 +267,17 @@ def filter_data(
                             dbc.ModalTitle(
                                 f'{book_info["name"]} - {book_info["author"]}')),
                         dbc.ModalBody(
-                            dbc.Row([
-                                dbc.Col(
-                                    dbc.CardImg(
-                                        src = f'assets/{x}1.png',
-                                        #style = {"max-height": "100vh", "object-fit": "contain"}
-                                    )
-                                ),
-                                dbc.Col(
-                                    dbc.CardImg(
-                                        src = f'assets/{x}2.png',
-                                        #style = {"max-height": "100vh", "object-fit": "contain"}
-                                    )
-                                )
-                            ])
+                            dbc.Carousel(
+                                items = [
+                                    {'key': '1', 'src': f'assets/{x}1.png'},
+                                    {'key': '2', 'src': f'assets/{x}2.png'},
+                                ],
+                                controls = True,
+                                indicators = True,
+                                interval = 3000,
+                                style = {'width': '100%'},
+                                variant = 'dark'
+                            )
                         ),
                         dbc.ModalFooter(
                             dbc.Button(
