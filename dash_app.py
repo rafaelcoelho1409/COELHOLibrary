@@ -21,7 +21,7 @@ navbar = dbc.Navbar(
                 [
                     dbc.Col(
                         dbc.NavbarBrand(
-                            "COELHO Library",
+                            [html.Br(), "COELHO Library"],
                             style = {
                                 'text-align': 'center',
                                 'font-size': '250%',
@@ -87,6 +87,7 @@ Clique no botão abaixo para saber mais e para comprar livros.""",
                                 'width': '100%'
                                 },
                             href = "https://api.whatsapp.com/send/?phone=5541996234222&text=Ol%C3%A1+Rafael,+quero+saber+mais+informa%C3%A7%C3%B5es+sobre+os+livros+que+voc%C3%AA+est%C3%A1+vendendo.",
+                            target="_blank",
                             external_link = True
                         ),
                         html.Br(),
@@ -108,6 +109,7 @@ internacional nos próximos anos.""",
                                         'width': '100%'
                                         },
                                     href = "https://linktr.ee/__rafael__coelho__",
+                                    target="_blank",
                                     external_link = True
                                 ),
                             ),
@@ -119,6 +121,7 @@ internacional nos próximos anos.""",
                                         'width': '100%'
                                         },
                                     href = "https://linkedin.com/in/rafaelcoelho1409/",
+                                    target="_blank",
                                     external_link = True
                                 ),
                             )
@@ -347,4 +350,4 @@ def filter_data(
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, dev_tools_ui = False)
