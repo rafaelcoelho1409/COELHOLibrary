@@ -29,6 +29,7 @@ st.markdown(
 )
 
 def run_dash():
+    subprocess.run(["pwd"])
     subprocess.run(["python3", "dash_app.py"])
 
 dash_thread = threading.Thread(target = run_dash)
