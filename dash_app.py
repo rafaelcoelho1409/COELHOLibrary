@@ -134,6 +134,8 @@ internacional nos próximos anos.""",
                         ]),
                         dbc.Row([
                             html.Br(),
+                            html.Br(),
+                            html.Hr(),
                             dbc.Col(
                                 dbc.Carousel(
                                     items = [
@@ -149,7 +151,7 @@ internacional nos próximos anos.""",
                                     variant = 'dark'         
                                 ),
                                 )], 
-                                style = {'text-align': 'center', 'padding': '0'})
+                                style = {'text-align': 'center'})
                     ], 
                     ),
                     className="col-md-8",
