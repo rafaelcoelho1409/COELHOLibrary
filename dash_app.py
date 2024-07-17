@@ -110,7 +110,8 @@ internacional nos próximos anos.""",
                                     "Portfólio Profissional - Rafael Coelho",
                                     color = "secondary",
                                     style = {
-                                        'width': '100%'
+                                        'width': '100%',
+                                        'height': '100%'
                                         },
                                     href = "https://linktr.ee/__rafael__coelho__",
                                     target="_blank",
@@ -122,7 +123,8 @@ internacional nos próximos anos.""",
                                     "LinkedIn - Rafael Coelho",
                                     color = "secondary",
                                     style = {
-                                        'width': '100%'
+                                        'width': '100%',
+                                        'height': '100%'
                                         },
                                     href = "https://linkedin.com/in/rafaelcoelho1409/",
                                     target="_blank",
