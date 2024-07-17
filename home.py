@@ -42,8 +42,7 @@ def run_dash():
     #    capture_output = True, 
     #    text = True)
     #print(result)
-    #subprocess.run([sys.executable, "dash_app.py"])
-    subprocess.run(["pip", "list"])
+    subprocess.run([sys.executable, "dash_app.py"])
 
 dash_thread = threading.Thread(target = run_dash)
 dash_thread.start()
