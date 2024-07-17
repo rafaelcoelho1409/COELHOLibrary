@@ -2,6 +2,7 @@ import streamlit as st
 import sys
 import threading
 import subprocess
+from streamlit.components.v1 import iframe
 
 st.set_page_config(layout="wide")
 
@@ -41,11 +42,11 @@ def run_dash():
     #    capture_output = True, 
     #    text = True)
     #print(result)
-    subprocess.run([sys.executable, "dash_app.py"])
-    #subprocess.run(["pip", "list"])
+    #subprocess.run([sys.executable, "dash_app.py"])
+    subprocess.run(["pip", "list"])
 
 dash_thread = threading.Thread(target = run_dash)
 dash_thread.start()
 
-st.components.v1.iframe("http://localhost:80", height=500)
+iframe("http://localhost:8050")
 #st.components.v1.iframe("http://localhost:8050", width = 500, height = 500, scrolling = True)
