@@ -47,5 +47,5 @@ def run_dash():
 dash_thread = threading.Thread(target = run_dash)
 dash_thread.start()
 
-iframe("http://localhost:8051")
+iframe("http://localhost:8050")
 #st.components.v1.iframe("http://localhost:8050", width = 500, height = 500, scrolling = True)
