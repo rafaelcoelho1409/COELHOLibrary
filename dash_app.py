@@ -23,7 +23,7 @@ navbar = dbc.Navbar(
                 [
                     dbc.Col(
                         dbc.NavbarBrand(
-                            [html.Br(), "COELHO Library"],
+                            ["COELHO Library"],
                             style = {
                                 'text-align': 'center',
                                 'font-size': '300%',
