@@ -131,7 +131,26 @@ internacional nos próximos anos.""",
                                     external_link = True
                                 ),
                             )
-                        ])
+                        ]),
+                        dbc.Row([
+                            html.Br(),
+                            dbc.Col(
+                                dbc.Carousel(
+                                    items = [
+                                        {
+                                            'key': x, 
+                                            'src': f'assets/my_photos/rafael00{x}.jpeg',
+                                            } for x in range(1,5)
+                                    ],
+                                    controls = True,
+                                    indicators = True,
+                                    interval = 3000,
+                                    style = {'width': '25%', 'text-align': 'center'},
+                                    variant = 'dark'         
+                                ),
+                                width={"size": 12, "offset": 5},  # Center the column
+                                )], 
+                                style = {'text-align': 'center', 'padding': '0'})
                     ], 
                     ),
                     className="col-md-8",
