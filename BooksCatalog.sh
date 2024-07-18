@@ -20,7 +20,12 @@ while [ $start_page -le $total_pages ]; do
     end_page=$total_pages
   fi
   output_pdf=${folder}/${start_page}_${end_page}.pdf
-  pdftk "$input_pdf" cat ${start_page}-${end_page}south output "$output_pdf"
+  pdftk "$input_pdf" cat ${start_page}-${end_page} output "$output_pdf"
   echo "Created $output_pdf"
   start_page=$((end_page + 1))
+done
+
+cd ${folder}
+for x in $(ls); do
+	pdftoppm ${x} ${x} -png
 done
