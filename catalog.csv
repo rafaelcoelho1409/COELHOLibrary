@@ -1,10 +1,10 @@
 ,filename,name,author,url,seller,price,genre,price_discount,price_description,sold_out
-0,100CoisasQueLíderesDeSucessoFazem,100 Coisas Que Líderes De Sucesso Fazem,Nigel Cumberland,https://www.livrariascuritiba.com.br/100-coisas-que-lideres-de-sucesso-fazem-lv491157/p,Livrarias Curitiba,64.9,Desenvolvimento Pessoal,32.45,Desconto de 50% (Excelente estado),No
+0,100CoisasQueLíderesDeSucessoFazem,100 Coisas Que Líderes De Sucesso Fazem,Nigel Cumberland,https://www.livrariascuritiba.com.br/100-coisas-que-lideres-de-sucesso-fazem-lv491157/p,Livrarias Curitiba,64.9,Desenvolvimento Pessoal,32.45,Desconto de 50% (Excelente estado),Yes
 1,100CoisasQuePessoasProdutivasFazem,100 Coisas Que Pessoas Produtivas Fazem,Nigel Cumberland,https://www.livrariascuritiba.com.br/100-coisas-que-pessoas-produtivas-fazem-lv502601/p,Livrarias Curitiba,64.9,Desenvolvimento Pessoal,32.45,Desconto de 50% (Excelente estado),No
 2,12RegrasParaAVida,12 Regras Para A Vida: Um Antídoto Para O Caos,Jordan B. Peterson,https://www.livrariascuritiba.com.br/12-regras-para-a-vida-lv429089/p,Livrarias Curitiba,65.9,Desenvolvimento Pessoal,32.95,Desconto de 50% (Excelente estado),No
 3,17EquaçõesQueMudaramOMundo,17 Equações Que Mudaram O Mundo,Ian Stewart,https://www.livrariascuritiba.com.br/17-equacoes-que-mudaram-o-mundo-lv325844/p,Livrarias Curitiba,94.9,Ciência,47.45,Desconto de 50% (Excelente estado),No
 4,1984,1984,George Orwell,https://www.livrariascuritiba.com.br/1984-lv248601/p,Livrarias Curitiba,39.9,Ficção,19.95,Desconto de 50% (Excelente estado),No
-5,AArteDeLerMentes,A Arte De Ler Mentes,Henrik Fexeus,https://www.amazon.com.br/arte-ler-mentes-Henrik-Fexeus/dp/8546501300,Amazon,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
+5,AArteDeLerMentes,A Arte De Ler Mentes,Henrik Fexeus,https://www.amazon.com.br/arte-ler-mentes-Henrik-Fexeus/dp/8546501300,Amazon,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),Yes
 6,AFórmulaDoYoutube,A Fórmula Do Youtube,Derral Eves,https://www.livrariascuritiba.com.br/a-formula-do-youtube-lv495265/p,Livrarias Curitiba,89.0,Marketing Digital,44.5,Desconto de 50% (Excelente estado),No
 7,AGuerraDosChips,A Guerra Dos Chips,Chris Miller,https://www.livrariascuritiba.com.br/a-guerra-dos-chips-lv500488/p,Livrarias Curitiba,69.9,História,34.95,Desconto de 50% (Excelente estado),No
 8,AlémDaOrdem,Além Da Ordem: Mais 12 Regras Para A Vida,Jordan B. Peterson,https://www.livrariascuritiba.com.br/alem-da-ordem-lv476241/p,Livrarias Curitiba,69.9,Desenvolvimento Pessoal,34.95,Desconto de 50% (Excelente estado),No
@@ -13,7 +13,7 @@
 11,AOrigemDosMeusSonhos,A Origem Dos Meus Sonhos,Barack Obama,https://www.amazon.com.br/origem-dos-meus-sonhos/dp/8573125942/,Amazon,42.9,Biografia,21.45,Desconto de 50% (Excelente estado),No
 12,AProposta,A Proposta,Katie Ashley,https://www.amazon.com.br/Proposta-Katie-Ashley/dp/8561784393/,Amazon,49.9,Ficção,24.95,Desconto de 50% (Excelente estado),No
 13,ARevoluçãoDosBichos,A Revolução Dos Bichos,George Orwell,https://www.livrariascuritiba.com.br/a-revolucao-dos-bichos-lv208178/p,Livrarias Curitiba,29.9,Ficção,14.95,Desconto de 50% (Excelente estado),No
-14,AsArmasDaPersuasão2_0,As Armas Da Persuasão 2.0,Robert B. Cialdini,https://www.livrariascuritiba.com.br/as-armas-da-persuasao-2-0-lv476614/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
+14,AsArmasDaPersuasão2_0,As Armas Da Persuasão 2.0,Robert B. Cialdini,https://www.livrariascuritiba.com.br/as-armas-da-persuasao-2-0-lv476614/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),Yes
 15,AsRegrasOcultasDoTrabalho,As Regras Ocultas Do Trabalho,Gorick NG,https://www.amazon.com.br/As-regras-ocultas-trabalho-trajet%C3%B3ria/dp/6555644788/,Amazon,59.9,Desenvolvimento Pessoal,29.95,Desconto de 50% (Excelente estado),No
 16,AStartupEnxuta,A Startup Enxuta,Eric Ries,https://www.livrariascuritiba.com.br/a-startup-enxuta-lv455925/p,Livrarias Curitiba,59.9,Negócios,29.95,Desconto de 50% (Excelente estado),No
 17,AtitudeMentalPositiva,Atitude Mental Positiva,Napoleon Hill,https://www.livrariascuritiba.com.br/atitude-mental-positiva-lv378383/p,Livrarias Curitiba,49.9,Desenvolvimento Pessoal,24.95,Desconto de 50% (Excelente estado),No
@@ -25,21 +25,21 @@
 23,ComoFazerAmigosEInfluenciarPessoasNaEraDigital,Como Fazer Amigos E Influenciar Pessoas Na Era Digital,Dale Carnegie e Associados,https://www.amazon.com.br/fazer-amigos-influenciar-pessoas-digital/dp/8543109485/,Amazon,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
 24,ComoFazerAmigosEInfluenciarPessoas,Como Fazer Amigos E Influenciar Pessoas,Dale Carnegie,https://www.livrariascuritiba.com.br/como-fazer-amigos-e-influenciar-pessoas-lv455172/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
 25,ComoLidarComOTrabalhoFlexível,Como Lidar Com O Trabalho Flexível,Harvard Business Review,https://www.livrariascuritiba.com.br/como-lidar-com-o-trabalho-flexivel-lv499300/p,Livrarias Curitiba,49.9,Desenvolvimento Pessoal,24.95,Desconto de 50% (Excelente estado),No
-26,ComunicaçãoCincoEstrelas,Comunicação Cinco Estrelas,Carmine Gallo,https://www.livrariascuritiba.com.br/comunicacao-cinco-estrelas-lv493204/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
+26,ComunicaçãoCincoEstrelas,Comunicação Cinco Estrelas,Carmine Gallo,https://www.livrariascuritiba.com.br/comunicacao-cinco-estrelas-lv493204/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),Yes
 27,Copywriting,Copywriting,Jim Edwards,https://www.livrariascuritiba.com.br/copywriting-lv493549/p,Livrarias Curitiba,69.9,Marketing Digital,34.95,Desconto de 50% (Excelente estado),No
 28,DiárioEstoico,Diário Estoico,Ryan Holiday,https://www.livrariascuritiba.com.br/diario-estoico-lv482819/p,Livrarias Curitiba,64.9,Desenvolvimento Pessoal,32.45,Desconto de 50% (Excelente estado),No
-29,DoMilAoMilhão,Do Mil Ao Milhão,Thiago Nigro,https://www.livrariascuritiba.com.br/do-mil-ao-milhao-lv438034/p,Livrarias Curitiba,39.9,Mercado Financeiro,15.0,Desconto acima de 50% por marcas de uso,No
+29,DoMilAoMilhão,Do Mil Ao Milhão,Thiago Nigro,https://www.livrariascuritiba.com.br/do-mil-ao-milhao-lv438034/p,Livrarias Curitiba,39.9,Mercado Financeiro,15.0,Desconto acima de 50% por marcas de uso,Yes
 30,Einstein,"Einstein: Sua Vida, Seu Universo",Walter Isaacson,https://www.amazon.com.br/Einstein-Walter-Isaacson/dp/8535911286/,Amazon,100.0,Biografia,50.0,Desconto de 50% (Excelente estado),No
 31,ElonMusk,Elon Musk,Walter Isaacson,https://www.livrariascuritiba.com.br/elon-musk-lv503301/p,Livrarias Curitiba,99.9,Biografia,49.95,Desconto de 50% (Excelente estado),No
 32,Fascistas,Fascistas,Michael Mann,,Sem Seller,100.0,História,50.0,Desconto de 50% (Excelente estado),No
 33,GanheMúsculos,Ganhe Músculos,Michael Matthews,https://www.livrariascuritiba.com.br/ganhe-musculos-lv495382/p,Livrarias Curitiba,84.9,Desenvolvimento Pessoal,25.0,Desconto acima de 50% por marcas de uso,No
 34,HabilidadeSocial,Habilidade Social,Henrik Fexeus,https://www.livrariascuritiba.com.br/habilidade-social-lv452342/p,Livrarias Curitiba,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
 35,Inferno,Inferno,Dan Brown,https://www.livrariascuritiba.com.br/inferno-lv325629/p,Livrarias Curitiba,69.9,Ficção,34.95,Desconto de 50% (Excelente estado),No
-36,InteligênciaEmocional,Inteligência Emocional,Daniel Goleman,https://www.livrariascuritiba.com.br/inteligencia-emocional-lv139055/p,Livrarias Curitiba,84.9,Desenvolvimento Pessoal,42.45,Desconto de 50% (Excelente estado),No
+36,InteligênciaEmocional,Inteligência Emocional,Daniel Goleman,https://www.livrariascuritiba.com.br/inteligencia-emocional-lv139055/p,Livrarias Curitiba,84.9,Desenvolvimento Pessoal,42.45,Desconto de 50% (Excelente estado),Yes
 37,InteligênciaPositiva,Inteligência Positiva,Shirzad Chamine,https://www.livrariascuritiba.com.br/inteligencia-positiva-lv325034/p,Livrarias Curitiba,59.9,Desenvolvimento Pessoal,20.0,Desconto acima de 50% por marcas de uso,No
 38,InteligênciaSocial,Inteligência Social,Daniel Goleman,https://www.livrariascuritiba.com.br/inteligencia-social-lv450680/p,Livrarias Curitiba,94.9,Desenvolvimento Pessoal,47.45,Desconto de 50% (Excelente estado),No
 39,LeonardoDaVinci,Leonardo Da Vinci,Walter Isaacson,https://www.livrariascuritiba.com.br/leonardo-da-vinci-lv420124/p,Livrarias Curitiba,139.9,Biografia,69.95,Desconto de 50% (Excelente estado),No
-40,LinguagemCorporal,Linguagem Corporal,Vitor Santos,https://www.amazon.com.br/Linguagem-corporal-pr%C3%A1tico-analisar-interpretar/dp/8584392521/,Amazon,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),No
+40,LinguagemCorporal,Linguagem Corporal,Vitor Santos,https://www.amazon.com.br/Linguagem-corporal-pr%C3%A1tico-analisar-interpretar/dp/8584392521/,Amazon,59.9,Comunicação,29.95,Desconto de 50% (Excelente estado),Yes
 41,Maestria,Maestria,Robert Greene,https://www.livrariascuritiba.com.br/maestria-lv334718/p,Livrarias Curitiba,69.9,Desenvolvimento Pessoal,34.95,Desconto de 50% (Excelente estado),No
 42,ManualDePersuasãoDoFBI,Manual De Persuasão Do FBI,Jack Schafer - Marvin Karlins,https://www.livrariascuritiba.com.br/manual-de-persuasao-do-fbi-lv378688/p,Livrarias Curitiba,49.9,Comunicação,24.95,Desconto de 50% (Excelente estado),No
 43,MarketingExperiencial,Marketing Experiencial,Shirra Smilansky,https://www.livrariascuritiba.com.br/marketing-experiencial-lv482971/p,Livrarias Curitiba,84.9,Marketing Digital,25.0,Desconto acima de 50% por marcas de uso,No
@@ -60,7 +60,7 @@
 58,OsCientistasDeHitler,Os Cientistas De Hitler,John Cornwell,https://www.amazon.com.br/Os-Cientistas-Hitler-Ci%C3%AAncia-Dem%C3%B4nio/dp/8531209137/,Amazon,94.9,História,47.45,Desconto de 50% (Excelente estado),No
 59,OsErrosDeEinstein,Os Erros De Einstein,Hans C. Ohanian,,Sem Seller,30.0,Biografia,15.0,Desconto de 50% (Excelente estado),No
 60,OSímboloPerdido,O Símbolo Perdido,Dan Brown,https://www.livrariascuritiba.com.br/o-simbolo-perdido-lv469553/p,Livrarias Curitiba,69.9,Ficção,34.95,Desconto de 50% (Excelente estado),No
-61,OsSegredosDaMenteMilionária,Os Segredos Da Mente Milionária,T. Harv Eker,https://www.livrariascuritiba.com.br/os-segredos-da-mente-milionaria-lv202947/p,Livrarias Curitiba,49.9,Desenvolvimento Pessoal,15.0,Desconto acima de 50% por marcas de uso,No
+61,OsSegredosDaMenteMilionária,Os Segredos Da Mente Milionária,T. Harv Eker,https://www.livrariascuritiba.com.br/os-segredos-da-mente-milionaria-lv202947/p,Livrarias Curitiba,49.9,Desenvolvimento Pessoal,15.0,Desconto acima de 50% por marcas de uso,Yes
 62,Outliers,Fora De Série: Outliers,Malcolm Gladwell,https://www.livrariascuritiba.com.br/fora-de-serie-outliers-lv237818/p,Livrarias Curitiba,54.9,Desenvolvimento Pessoal,27.45,Desconto de 50% (Excelente estado),No
 63,ProjetoNacional,Projeto Nacional: O Dever Da Esperança,Ciro Gomes,https://www.livrariascuritiba.com.br/projeto-nacional---o-dever-da-esperanca-lv467033/p,Livrarias Curitiba,55.0,História,27.5,Desconto de 50% (Excelente estado),No
 64,RápidoEDevagar,Rápido E Devagar: Duas Formas De Pensar,Daniel Kahneman,https://www.livrariascuritiba.com.br/rapido-e-devagar-lv312632/p,Livrarias Curitiba,109.9,Desenvolvimento Pessoal,54.95,Desconto de 50% (Excelente estado),No
