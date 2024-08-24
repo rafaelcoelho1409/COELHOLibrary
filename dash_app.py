@@ -142,7 +142,22 @@ internacional nos próximos anos.""",
                                         {
                                             'key': x, 
                                             'src': f'assets/my_photos/rafael00{x}.jpeg',
-                                            } for x in range(1,5)
+                                            } for x in range(1,3)
+                                    ],
+                                    controls = True,
+                                    indicators = True,
+                                    interval = 3000,
+                                    style = {'width': '50%', 'text-align': 'center'},
+                                    variant = 'dark'         
+                                ),
+                                ),
+                            dbc.Col(
+                                dbc.Carousel(
+                                    items = [
+                                        {
+                                            'key': x, 
+                                            'src': f'assets/my_photos/rafael00{x}.jpeg',
+                                            } for x in range(3,5)
                                     ],
                                     controls = True,
                                     indicators = True,
